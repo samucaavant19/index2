@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com atributos</title>
+    <meta charset="UTF-8">
+
+<style>
+    #emoji {
+    width: 200px;
+    height: 200px;
+
+    }
+        
+     .e1 {   
+        background-image: url ("imgs/el.png");
+        }
+        
+        .e2 {
+        background-image: url("imgs/e2.png");
+         }
+
+       .e3 {
+        background-image: url("imgs/e3.png");
+         }
+
+        </style>
+      <script>
+
+        function trocaEmoji(e) {
+        var obj = document.getElementById("emoji");
+        obj.removeAttribute("class");
+        }
+       function verifica() {
+        var obj = document.getElementById("emoji");
+        if (obj.hasAttribute("class")) {
+            alert("Atributo class esta na tag");
+            }else{
+            alert("sem atrbuto class");
+     }
+     } 
+      
+            </script>
+</head>
+<body>
+    
+    <button onclick="trocaEmoji(1)"> 1</button>
+    <button onclick="trocaEmoji(2)"> 2</button>
+    <button onclick="trocaEmoji(3)"> 3</button>
+    <button onclick="removerEmoji()">Remover Emoji</button>
+    <button onclick="verifica()"> Verificar</button>
+    <div id="emoji"></div>
+
+</body>
+</html>
